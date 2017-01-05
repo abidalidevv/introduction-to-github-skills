@@ -2410,3 +2410,7 @@ async function fetchJSON(url, options = {}) {
   if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
   return res.json();
 }
+
+
+const scrollToTop = (smooth = true) =>
+  window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
