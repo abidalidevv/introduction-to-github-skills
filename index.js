@@ -2422,3 +2422,7 @@ const omit = (obj, keys) =>
 
 const queryParams = (params) =>
   '?' + new URLSearchParams(params).toString();
+
+
+const toKebabCase = (str) =>
+  str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
