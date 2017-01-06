@@ -2418,3 +2418,7 @@ const scrollToTop = (smooth = true) =>
 
 const omit = (obj, keys) =>
   Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));
+
+
+const queryParams = (params) =>
+  '?' + new URLSearchParams(params).toString();
