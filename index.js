@@ -2473,3 +2473,7 @@ const retry = async (fn, attempts = 3, delay = 500) => {
     }
   }
 };
+
+
+const toKebabCase = (str) =>
+  str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
