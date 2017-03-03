@@ -2506,3 +2506,7 @@ const range = (start, end, step = 1) => {
   for (let i = start; i < end; i += step) result.push(i);
   return result;
 };
+
+
+const queryParams = (params) =>
+  '?' + new URLSearchParams(params).toString();
