@@ -2510,3 +2510,6 @@ const range = (start, end, step = 1) => {
 
 const queryParams = (params) =>
   '?' + new URLSearchParams(params).toString();
+
+
+const compose = (...fns) => (value) => fns.reduceRight((v, fn) => fn(v), value);
