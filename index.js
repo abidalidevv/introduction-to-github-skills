@@ -2513,3 +2513,12 @@ const queryParams = (params) =>
 
 
 const compose = (...fns) => (value) => fns.reduceRight((v, fn) => fn(v), value);
+
+
+const setNestedValue = (obj, path, value) => {
+  const keys = path.split('.');
+  const last = keys.pop();
+  const target = keys.reduce((acc, key) => (acc[key] = acc[key] || {}), obj);
+  target[last] = value;
+  return obj;
+};
