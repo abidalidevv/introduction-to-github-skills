@@ -2531,3 +2531,6 @@ const debounce = (fn, delay) => {
     timer = setTimeout(() => fn(...args), delay);
   };
 };
+
+
+const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
