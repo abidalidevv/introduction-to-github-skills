@@ -2534,3 +2534,6 @@ const debounce = (fn, delay) => {
 
 
 const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
+
+
+const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
