@@ -2620,3 +2620,7 @@ const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
 
 const scrollToTop = (smooth = true) =>
   window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+
+
+const generateId = (length = 8) =>
+  Math.random().toString(36).substring(2, 2 + length);
