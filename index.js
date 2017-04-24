@@ -2624,3 +2624,9 @@ const scrollToTop = (smooth = true) =>
 
 const generateId = (length = 8) =>
   Math.random().toString(36).substring(2, 2 + length);
+
+
+const chunk = (arr, size) =>
+  Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
+    arr.slice(i * size, i * size + size)
+  );
