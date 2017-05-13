@@ -2773,3 +2773,7 @@ async function fetchJSON(url, options = {}) {
   if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
   return res.json();
 }
+
+
+const generateId = (length = 8) =>
+  Math.random().toString(36).substring(2, 2 + length);
