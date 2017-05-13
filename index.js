@@ -2763,3 +2763,13 @@ const memoize = (fn) => {
 
 const scrollToTop = (smooth = true) =>
   window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+
+
+async function fetchJSON(url, options = {}) {
+  const res = await fetch(url, {
+    headers: { 'Content-Type': 'application/json' },
+    ...options,
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+  return res.json();
+}
