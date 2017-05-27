@@ -2812,3 +2812,7 @@ const copyToClipboard = async (text) => {
     document.body.removeChild(el);
   }
 };
+
+
+const formatCurrency = (amount, currency = 'USD', locale = 'en-US') =>
+  new Intl.NumberFormat(locale, { style: 'currency', currency }).format(amount);
