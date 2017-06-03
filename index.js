@@ -2838,3 +2838,6 @@ const throttle = (fn, limit) => {
     }
   };
 };
+
+
+const flatten = (arr, depth = 1) => arr.flat(depth);
