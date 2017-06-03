@@ -2841,3 +2841,7 @@ const throttle = (fn, limit) => {
 
 
 const flatten = (arr, depth = 1) => arr.flat(depth);
+
+
+const formatCurrency = (amount, currency = 'USD', locale = 'en-US') =>
+  new Intl.NumberFormat(locale, { style: 'currency', currency }).format(amount);
