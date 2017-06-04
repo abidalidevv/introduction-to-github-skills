@@ -2849,3 +2849,6 @@ const formatCurrency = (amount, currency = 'USD', locale = 'en-US') =>
 
 const capitalize = (str) =>
   str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+
+
+const compose = (...fns) => (value) => fns.reduceRight((v, fn) => fn(v), value);
