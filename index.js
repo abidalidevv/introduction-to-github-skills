@@ -2862,3 +2862,12 @@ const range = (start, end, step = 1) => {
 
 
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+
+
+const setNestedValue = (obj, path, value) => {
+  const keys = path.split('.');
+  const last = keys.pop();
+  const target = keys.reduce((acc, key) => (acc[key] = acc[key] || {}), obj);
+  target[last] = value;
+  return obj;
+};
