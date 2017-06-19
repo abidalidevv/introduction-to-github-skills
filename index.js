@@ -2875,3 +2875,7 @@ const setNestedValue = (obj, path, value) => {
 
 const queryParams = (params) =>
   '?' + new URLSearchParams(params).toString();
+
+
+const isValidEmail = (email) =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
