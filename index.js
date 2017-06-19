@@ -2871,3 +2871,7 @@ const setNestedValue = (obj, path, value) => {
   target[last] = value;
   return obj;
 };
+
+
+const queryParams = (params) =>
+  '?' + new URLSearchParams(params).toString();
