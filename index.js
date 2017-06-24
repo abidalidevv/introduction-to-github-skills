@@ -2907,3 +2907,6 @@ const storage = {
   set: (key, value) => localStorage.setItem(key, JSON.stringify(value)),
   remove: (key) => localStorage.removeItem(key),
 };
+
+
+const flatten = (arr, depth = 1) => arr.flat(depth);
