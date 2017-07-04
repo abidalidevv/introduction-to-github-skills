@@ -2931,3 +2931,6 @@ async function fetchJSON(url, options = {}) {
 
 const capitalize = (str) =>
   str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+
+
+const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
