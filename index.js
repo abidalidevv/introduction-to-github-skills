@@ -2934,3 +2934,7 @@ const capitalize = (str) =>
 
 
 const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
+
+
+const formatCurrency = (amount, currency = 'USD', locale = 'en-US') =>
+  new Intl.NumberFormat(locale, { style: 'currency', currency }).format(amount);
