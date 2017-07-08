@@ -2952,3 +2952,6 @@ const copyToClipboard = async (text) => {
     document.body.removeChild(el);
   }
 };
+
+
+const flatten = (arr, depth = 1) => arr.flat(depth);
