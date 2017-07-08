@@ -2955,3 +2955,6 @@ const copyToClipboard = async (text) => {
 
 
 const flatten = (arr, depth = 1) => arr.flat(depth);
+
+
+const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
