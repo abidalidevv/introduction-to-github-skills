@@ -2962,3 +2962,10 @@ const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
 
 const scrollToTop = (smooth = true) =>
   window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+
+
+const range = (start, end, step = 1) => {
+  const result = [];
+  for (let i = start; i < end; i += step) result.push(i);
+  return result;
+};
