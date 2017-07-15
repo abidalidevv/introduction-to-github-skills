@@ -2958,3 +2958,7 @@ const flatten = (arr, depth = 1) => arr.flat(depth);
 
 
 const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
+
+
+const scrollToTop = (smooth = true) =>
+  window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
