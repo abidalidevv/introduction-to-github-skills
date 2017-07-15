@@ -2969,3 +2969,6 @@ const range = (start, end, step = 1) => {
   for (let i = start; i < end; i += step) result.push(i);
   return result;
 };
+
+
+const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
