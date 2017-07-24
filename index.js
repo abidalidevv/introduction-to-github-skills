@@ -2976,3 +2976,6 @@ const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
 
 const toKebabCase = (str) =>
   str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+
+
+const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
