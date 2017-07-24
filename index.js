@@ -2972,3 +2972,7 @@ const range = (start, end, step = 1) => {
 
 
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+
+
+const toKebabCase = (str) =>
+  str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
