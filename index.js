@@ -3025,3 +3025,12 @@ const retry = async (fn, attempts = 3, delay = 500) => {
     }
   }
 };
+
+
+const setNestedValue = (obj, path, value) => {
+  const keys = path.split('.');
+  const last = keys.pop();
+  const target = keys.reduce((acc, key) => (acc[key] = acc[key] || {}), obj);
+  target[last] = value;
+  return obj;
+};
