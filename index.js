@@ -3064,3 +3064,6 @@ const chunk = (arr, size) =>
 
 const toKebabCase = (str) =>
   str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+
+
+const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
