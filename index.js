@@ -3087,3 +3087,7 @@ const compose = (...fns) => (value) => fns.reduceRight((v, fn) => fn(v), value);
 
 
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+
+
+const queryParams = (params) =>
+  '?' + new URLSearchParams(params).toString();
