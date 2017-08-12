@@ -3091,3 +3091,6 @@ const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
 
 const queryParams = (params) =>
   '?' + new URLSearchParams(params).toString();
+
+
+const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
