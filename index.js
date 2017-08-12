@@ -3084,3 +3084,6 @@ const capitalize = (str) =>
 
 
 const compose = (...fns) => (value) => fns.reduceRight((v, fn) => fn(v), value);
+
+
+const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
