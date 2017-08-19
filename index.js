@@ -3098,3 +3098,6 @@ const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
 
 const parseQueryString = (search = window.location.search) =>
   Object.fromEntries(new URLSearchParams(search));
+
+
+const compose = (...fns) => (value) => fns.reduceRight((v, fn) => fn(v), value);
