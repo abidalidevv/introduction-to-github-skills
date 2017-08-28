@@ -3139,3 +3139,6 @@ class EventEmitter {
     return this;
   }
 }
+
+
+const flatten = (arr, depth = 1) => arr.flat(depth);
