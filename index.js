@@ -3142,3 +3142,7 @@ class EventEmitter {
 
 
 const flatten = (arr, depth = 1) => arr.flat(depth);
+
+
+const capitalize = (str) =>
+  str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
