@@ -3157,3 +3157,7 @@ const range = (start, end, step = 1) => {
   for (let i = start; i < end; i += step) result.push(i);
   return result;
 };
+
+
+const omit = (obj, keys) =>
+  Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));
