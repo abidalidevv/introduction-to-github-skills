@@ -3168,3 +3168,11 @@ const flatten = (arr, depth = 1) => arr.flat(depth);
 
 const generateId = (length = 8) =>
   Math.random().toString(36).substring(2, 2 + length);
+
+
+const groupBy = (arr, key) =>
+  arr.reduce((acc, item) => {
+    const k = typeof key === 'function' ? key(item) : item[key];
+    (acc[k] = acc[k] || []).push(item);
+    return acc;
+  }, {});
