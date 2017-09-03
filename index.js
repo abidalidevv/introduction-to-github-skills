@@ -3180,3 +3180,7 @@ const groupBy = (arr, key) =>
 
 const toCamelCase = (str) =>
   str.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
+
+
+const capitalize = (str) =>
+  str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
