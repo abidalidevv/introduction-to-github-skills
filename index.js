@@ -3176,3 +3176,7 @@ const groupBy = (arr, key) =>
     (acc[k] = acc[k] || []).push(item);
     return acc;
   }, {});
+
+
+const toCamelCase = (str) =>
+  str.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
