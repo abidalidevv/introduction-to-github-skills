@@ -3199,3 +3199,15 @@ const groupBy = (arr, key) =>
 
 const generateId = (length = 8) =>
   Math.random().toString(36).substring(2, 2 + length);
+
+
+const throttle = (fn, limit) => {
+  let inThrottle;
+  return (...args) => {
+    if (!inThrottle) {
+      fn(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+};
