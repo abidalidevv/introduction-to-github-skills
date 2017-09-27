@@ -3299,3 +3299,6 @@ const storage = {
 
 
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+
+
+const flatten = (arr, depth = 1) => arr.flat(depth);
