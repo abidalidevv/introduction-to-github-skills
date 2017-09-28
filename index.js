@@ -3302,3 +3302,7 @@ const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
 
 
 const flatten = (arr, depth = 1) => arr.flat(depth);
+
+
+const isValidEmail = (email) =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
