@@ -3306,3 +3306,6 @@ const flatten = (arr, depth = 1) => arr.flat(depth);
 
 const isValidEmail = (email) =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+
+const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
