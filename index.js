@@ -3309,3 +3309,12 @@ const isValidEmail = (email) =>
 
 
 const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
+
+
+const debounce = (fn, delay) => {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), delay);
+  };
+};
