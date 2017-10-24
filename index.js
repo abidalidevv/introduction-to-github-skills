@@ -3338,3 +3338,15 @@ class EventEmitter {
 
 
 const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
+
+
+const retry = async (fn, attempts = 3, delay = 500) => {
+  for (let i = 0; i < attempts; i++) {
+    try {
+      return await fn();
+    } catch (err) {
+      if (i === attempts - 1) throw err;
+      await sleep(delay * (i + 1));
+    }
+  }
+};
