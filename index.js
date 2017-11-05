@@ -3373,3 +3373,7 @@ const groupBy = (arr, key) =>
 
 
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+
+
+const queryParams = (params) =>
+  '?' + new URLSearchParams(params).toString();
