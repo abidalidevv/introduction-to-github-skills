@@ -3377,3 +3377,9 @@ const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
 
 const queryParams = (params) =>
   '?' + new URLSearchParams(params).toString();
+
+
+const chunk = (arr, size) =>
+  Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
+    arr.slice(i * size, i * size + size)
+  );
