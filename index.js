@@ -3399,3 +3399,13 @@ const retry = async (fn, attempts = 3, delay = 500) => {
 
 const queryParams = (params) =>
   '?' + new URLSearchParams(params).toString();
+
+
+const storage = {
+  get: (key, fallback = null) => {
+    try { return JSON.parse(localStorage.getItem(key)) ?? fallback; }
+    catch { return fallback; }
+  },
+  set: (key, value) => localStorage.setItem(key, JSON.stringify(value)),
+  remove: (key) => localStorage.removeItem(key),
+};
