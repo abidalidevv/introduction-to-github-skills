@@ -3416,3 +3416,7 @@ const generateId = (length = 8) =>
 
 
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+
+
+const pick = (obj, keys) =>
+  Object.fromEntries(keys.filter((k) => k in obj).map((k) => [k, obj[k]]));
