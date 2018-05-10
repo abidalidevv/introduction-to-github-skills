@@ -3529,3 +3529,12 @@ const capitalize = (str) =>
 
 
 const unique = (arr) => [...new Set(arr)];
+
+
+const debounce = (fn, delay) => {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), delay);
+  };
+};
