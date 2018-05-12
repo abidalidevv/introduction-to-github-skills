@@ -3544,3 +3544,13 @@ const chunk = (arr, size) =>
   Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
     arr.slice(i * size, i * size + size)
   );
+
+
+const storage = {
+  get: (key, fallback = null) => {
+    try { return JSON.parse(localStorage.getItem(key)) ?? fallback; }
+    catch { return fallback; }
+  },
+  set: (key, value) => localStorage.setItem(key, JSON.stringify(value)),
+  remove: (key) => localStorage.removeItem(key),
+};
