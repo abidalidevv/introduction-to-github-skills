@@ -3561,3 +3561,6 @@ const unique = (arr) => [...new Set(arr)];
 
 const isValidEmail = (email) =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+
+const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
