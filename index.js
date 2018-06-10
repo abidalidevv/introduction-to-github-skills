@@ -3571,3 +3571,7 @@ const range = (start, end, step = 1) => {
   for (let i = start; i < end; i += step) result.push(i);
   return result;
 };
+
+
+const generateId = (length = 8) =>
+  Math.random().toString(36).substring(2, 2 + length);
