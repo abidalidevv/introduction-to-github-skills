@@ -3594,3 +3594,17 @@ const retry = async (fn, attempts = 3, delay = 500) => {
 
 
 const flatten = (arr, depth = 1) => arr.flat(depth);
+
+
+const copyToClipboard = async (text) => {
+  if (navigator.clipboard) {
+    await navigator.clipboard.writeText(text);
+  } else {
+    const el = document.createElement('textarea');
+    el.value = text;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  }
+};
