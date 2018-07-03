@@ -3641,3 +3641,7 @@ const storage = {
   set: (key, value) => localStorage.setItem(key, JSON.stringify(value)),
   remove: (key) => localStorage.removeItem(key),
 };
+
+
+const toCamelCase = (str) =>
+  str.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
