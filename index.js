@@ -3628,3 +3628,6 @@ const scrollToTop = (smooth = true) =>
 
 const pick = (obj, keys) =>
   Object.fromEntries(keys.filter((k) => k in obj).map((k) => [k, obj[k]]));
+
+
+const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
