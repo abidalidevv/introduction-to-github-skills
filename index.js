@@ -3649,3 +3649,6 @@ const toCamelCase = (str) =>
 
 const omit = (obj, keys) =>
   Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));
+
+
+const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
