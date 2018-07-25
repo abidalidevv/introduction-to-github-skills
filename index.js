@@ -3677,3 +3677,6 @@ const setNestedValue = (obj, path, value) => {
   target[last] = value;
   return obj;
 };
+
+
+const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
