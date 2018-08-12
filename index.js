@@ -3687,3 +3687,7 @@ const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
 
 const isValidEmail = (email) =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+
+const toKebabCase = (str) =>
+  str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
