@@ -3813,3 +3813,6 @@ const memoize = (fn) => {
 
 const parseQueryString = (search = window.location.search) =>
   Object.fromEntries(new URLSearchParams(search));
+
+
+const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
