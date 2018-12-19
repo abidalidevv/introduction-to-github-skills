@@ -3819,3 +3819,11 @@ const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
 
 
 const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+
+
+const groupBy = (arr, key) =>
+  arr.reduce((acc, item) => {
+    const k = typeof key === 'function' ? key(item) : item[key];
+    (acc[k] = acc[k] || []).push(item);
+    return acc;
+  }, {});
