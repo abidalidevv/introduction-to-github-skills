@@ -3816,3 +3816,6 @@ const parseQueryString = (search = window.location.search) =>
 
 
 const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
+
+
+const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
