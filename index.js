@@ -3827,3 +3827,10 @@ const groupBy = (arr, key) =>
     (acc[k] = acc[k] || []).push(item);
     return acc;
   }, {});
+
+
+const formatDate = (date, locale = 'en-US', options = {}) =>
+  new Intl.DateTimeFormat(locale, {
+    year: 'numeric', month: 'short', day: 'numeric',
+    ...options,
+  }).format(new Date(date));
