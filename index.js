@@ -3885,3 +3885,7 @@ const capitalize = (str) =>
 
 const getNestedValue = (obj, path, fallback = undefined) =>
   path.split('.').reduce((acc, key) => acc?.[key], obj) ?? fallback;
+
+
+const isValidEmail = (email) =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
