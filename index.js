@@ -3889,3 +3889,6 @@ const getNestedValue = (obj, path, fallback = undefined) =>
 
 const isValidEmail = (email) =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+
+const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
