@@ -3881,3 +3881,7 @@ const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
 
 const capitalize = (str) =>
   str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+
+
+const getNestedValue = (obj, path, fallback = undefined) =>
+  path.split('.').reduce((acc, key) => acc?.[key], obj) ?? fallback;
