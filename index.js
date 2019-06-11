@@ -3901,3 +3901,7 @@ const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
 
 
 const flatten = (arr, depth = 1) => arr.flat(depth);
+
+
+const omit = (obj, keys) =>
+  Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));
