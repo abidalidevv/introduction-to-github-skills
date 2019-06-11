@@ -3905,3 +3905,7 @@ const flatten = (arr, depth = 1) => arr.flat(depth);
 
 const omit = (obj, keys) =>
   Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));
+
+
+const getNestedValue = (obj, path, fallback = undefined) =>
+  path.split('.').reduce((acc, key) => acc?.[key], obj) ?? fallback;
