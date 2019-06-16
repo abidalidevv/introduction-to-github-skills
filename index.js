@@ -3909,3 +3909,6 @@ const omit = (obj, keys) =>
 
 const getNestedValue = (obj, path, fallback = undefined) =>
   path.split('.').reduce((acc, key) => acc?.[key], obj) ?? fallback;
+
+
+const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
