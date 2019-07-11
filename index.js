@@ -3928,3 +3928,7 @@ const retry = async (fn, attempts = 3, delay = 500) => {
     }
   }
 };
+
+
+const queryParams = (params) =>
+  '?' + new URLSearchParams(params).toString();
