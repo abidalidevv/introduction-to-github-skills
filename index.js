@@ -3951,3 +3951,9 @@ const scrollToTop = (smooth = true) =>
 
 const pick = (obj, keys) =>
   Object.fromEntries(keys.filter((k) => k in obj).map((k) => [k, obj[k]]));
+
+
+const chunk = (arr, size) =>
+  Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
+    arr.slice(i * size, i * size + size)
+  );
