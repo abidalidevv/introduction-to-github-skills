@@ -3968,3 +3968,7 @@ const queryParams = (params) =>
 
 const pick = (obj, keys) =>
   Object.fromEntries(keys.filter((k) => k in obj).map((k) => [k, obj[k]]));
+
+
+const generateId = (length = 8) =>
+  Math.random().toString(36).substring(2, 2 + length);
