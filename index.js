@@ -3979,3 +3979,12 @@ const formatDate = (date, locale = 'en-US', options = {}) =>
     year: 'numeric', month: 'short', day: 'numeric',
     ...options,
   }).format(new Date(date));
+
+
+const debounce = (fn, delay) => {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), delay);
+  };
+};
