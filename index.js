@@ -4015,3 +4015,6 @@ const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
 
 
 const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
+
+
+const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
