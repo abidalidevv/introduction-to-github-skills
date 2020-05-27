@@ -4032,3 +4032,7 @@ const pick = (obj, keys) =>
 
 const queryParams = (params) =>
   '?' + new URLSearchParams(params).toString();
+
+
+const scrollToTop = (smooth = true) =>
+  window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
