@@ -4042,3 +4042,6 @@ const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
 
 
 const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
+
+
+const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
