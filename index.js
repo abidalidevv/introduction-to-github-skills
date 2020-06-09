@@ -4045,3 +4045,7 @@ const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
 
 
 const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
+
+
+const queryParams = (params) =>
+  '?' + new URLSearchParams(params).toString();
