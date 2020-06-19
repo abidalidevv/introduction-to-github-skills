@@ -4049,3 +4049,6 @@ const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
 
 const queryParams = (params) =>
   '?' + new URLSearchParams(params).toString();
+
+
+const flatten = (arr, depth = 1) => arr.flat(depth);
