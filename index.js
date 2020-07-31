@@ -4060,3 +4060,7 @@ const groupBy = (arr, key) =>
     (acc[k] = acc[k] || []).push(item);
     return acc;
   }, {});
+
+
+const toKebabCase = (str) =>
+  str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
