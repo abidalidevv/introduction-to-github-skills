@@ -4064,3 +4064,7 @@ const groupBy = (arr, key) =>
 
 const toKebabCase = (str) =>
   str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+
+
+const parseQueryString = (search = window.location.search) =>
+  Object.fromEntries(new URLSearchParams(search));
