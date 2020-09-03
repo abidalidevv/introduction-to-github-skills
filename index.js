@@ -4068,3 +4068,7 @@ const toKebabCase = (str) =>
 
 const parseQueryString = (search = window.location.search) =>
   Object.fromEntries(new URLSearchParams(search));
+
+
+const queryParams = (params) =>
+  '?' + new URLSearchParams(params).toString();
