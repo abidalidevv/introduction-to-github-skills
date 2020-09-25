@@ -4080,3 +4080,7 @@ const formatCurrency = (amount, currency = 'USD', locale = 'en-US') =>
 
 const toCamelCase = (str) =>
   str.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
+
+
+const parseQueryString = (search = window.location.search) =>
+  Object.fromEntries(new URLSearchParams(search));
