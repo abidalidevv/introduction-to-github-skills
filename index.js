@@ -4110,3 +4110,7 @@ const throttle = (fn, limit) => {
     }
   };
 };
+
+
+const toKebabCase = (str) =>
+  str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
