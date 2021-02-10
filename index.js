@@ -4130,3 +4130,6 @@ const toCamelCase = (str) =>
 
 
 const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
+
+
+const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
