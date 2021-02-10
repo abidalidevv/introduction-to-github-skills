@@ -4127,3 +4127,6 @@ const setNestedValue = (obj, path, value) => {
 
 const toCamelCase = (str) =>
   str.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
+
+
+const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
