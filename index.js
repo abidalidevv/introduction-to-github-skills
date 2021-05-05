@@ -4136,3 +4136,6 @@ const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
 
 
 const unique = (arr) => [...new Set(arr)];
+
+
+const flatten = (arr, depth = 1) => arr.flat(depth);
