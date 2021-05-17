@@ -4155,3 +4155,7 @@ const retry = async (fn, attempts = 3, delay = 500) => {
 
 const toCamelCase = (str) =>
   str.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
+
+
+const capitalize = (str) =>
+  str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
