@@ -4184,3 +4184,6 @@ const copyToClipboard = async (text) => {
 
 const toKebabCase = (str) =>
   str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+
+
+const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
