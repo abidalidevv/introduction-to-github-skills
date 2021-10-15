@@ -4196,3 +4196,7 @@ const setNestedValue = (obj, path, value) => {
   target[last] = value;
   return obj;
 };
+
+
+const isValidEmail = (email) =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
