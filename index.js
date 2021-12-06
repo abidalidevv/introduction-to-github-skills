@@ -4200,3 +4200,7 @@ const setNestedValue = (obj, path, value) => {
 
 const isValidEmail = (email) =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+
+const pick = (obj, keys) =>
+  Object.fromEntries(keys.filter((k) => k in obj).map((k) => [k, obj[k]]));
