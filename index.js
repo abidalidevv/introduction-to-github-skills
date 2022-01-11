@@ -4204,3 +4204,10 @@ const isValidEmail = (email) =>
 
 const pick = (obj, keys) =>
   Object.fromEntries(keys.filter((k) => k in obj).map((k) => [k, obj[k]]));
+
+
+const formatDate = (date, locale = 'en-US', options = {}) =>
+  new Intl.DateTimeFormat(locale, {
+    year: 'numeric', month: 'short', day: 'numeric',
+    ...options,
+  }).format(new Date(date));
