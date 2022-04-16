@@ -4275,3 +4275,6 @@ const memoize = (fn) => {
 
 const isValidEmail = (email) =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+
+const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
