@@ -4271,3 +4271,7 @@ const memoize = (fn) => {
     return result;
   };
 };
+
+
+const isValidEmail = (email) =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
