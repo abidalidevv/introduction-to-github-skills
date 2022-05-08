@@ -4288,3 +4288,6 @@ async function fetchJSON(url, options = {}) {
   if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
   return res.json();
 }
+
+
+const flatten = (arr, depth = 1) => arr.flat(depth);
