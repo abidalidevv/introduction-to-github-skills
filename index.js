@@ -4311,3 +4311,7 @@ const formatCurrency = (amount, currency = 'USD', locale = 'en-US') =>
 
 
 const flatten = (arr, depth = 1) => arr.flat(depth);
+
+
+const omit = (obj, keys) =>
+  Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));
