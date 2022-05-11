@@ -4308,3 +4308,6 @@ const unique = (arr) => [...new Set(arr)];
 
 const formatCurrency = (amount, currency = 'USD', locale = 'en-US') =>
   new Intl.NumberFormat(locale, { style: 'currency', currency }).format(amount);
+
+
+const flatten = (arr, depth = 1) => arr.flat(depth);
