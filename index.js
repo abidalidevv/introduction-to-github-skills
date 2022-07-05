@@ -4315,3 +4315,7 @@ const flatten = (arr, depth = 1) => arr.flat(depth);
 
 const omit = (obj, keys) =>
   Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));
+
+
+const capitalize = (str) =>
+  str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
