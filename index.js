@@ -4349,3 +4349,15 @@ const copyToClipboard = async (text) => {
 
 const queryParams = (params) =>
   '?' + new URLSearchParams(params).toString();
+
+
+const memoize = (fn) => {
+  const cache = new Map();
+  return (...args) => {
+    const key = JSON.stringify(args);
+    if (cache.has(key)) return cache.get(key);
+    const result = fn(...args);
+    cache.set(key, result);
+    return result;
+  };
+};
