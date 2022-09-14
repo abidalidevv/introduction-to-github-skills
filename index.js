@@ -4379,3 +4379,7 @@ const toKebabCase = (str) =>
 
 
 const unique = (arr) => [...new Set(arr)];
+
+
+const toCamelCase = (str) =>
+  str.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
