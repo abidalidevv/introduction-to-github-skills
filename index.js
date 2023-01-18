@@ -4400,3 +4400,6 @@ const storage = {
   set: (key, value) => localStorage.setItem(key, JSON.stringify(value)),
   remove: (key) => localStorage.removeItem(key),
 };
+
+
+const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
