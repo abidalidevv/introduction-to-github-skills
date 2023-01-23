@@ -4403,3 +4403,6 @@ const storage = {
 
 
 const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
+
+
+const deepClone = (obj) => JSON.parse(JSON.stringify(obj));
