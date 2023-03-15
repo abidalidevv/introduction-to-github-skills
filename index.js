@@ -4434,3 +4434,6 @@ const copyToClipboard = async (text) => {
     document.body.removeChild(el);
   }
 };
+
+
+const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
