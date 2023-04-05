@@ -4441,3 +4441,17 @@ const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
 
 const omit = (obj, keys) =>
   Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));
+
+
+const copyToClipboard = async (text) => {
+  if (navigator.clipboard) {
+    await navigator.clipboard.writeText(text);
+  } else {
+    const el = document.createElement('textarea');
+    el.value = text;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  }
+};
