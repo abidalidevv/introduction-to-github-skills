@@ -4523,3 +4523,7 @@ const copyToClipboard = async (text) => {
     document.body.removeChild(el);
   }
 };
+
+
+const getNestedValue = (obj, path, fallback = undefined) =>
+  path.split('.').reduce((acc, key) => acc?.[key], obj) ?? fallback;
