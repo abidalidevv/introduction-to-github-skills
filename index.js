@@ -4527,3 +4527,9 @@ const copyToClipboard = async (text) => {
 
 const getNestedValue = (obj, path, fallback = undefined) =>
   path.split('.').reduce((acc, key) => acc?.[key], obj) ?? fallback;
+
+
+const chunk = (arr, size) =>
+  Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
+    arr.slice(i * size, i * size + size)
+  );
