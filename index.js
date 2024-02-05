@@ -4557,3 +4557,6 @@ const storage = {
   set: (key, value) => localStorage.setItem(key, JSON.stringify(value)),
   remove: (key) => localStorage.removeItem(key),
 };
+
+
+const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
