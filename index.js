@@ -4583,3 +4583,7 @@ const copyToClipboard = async (text) => {
     document.body.removeChild(el);
   }
 };
+
+
+const queryParams = (params) =>
+  '?' + new URLSearchParams(params).toString();
