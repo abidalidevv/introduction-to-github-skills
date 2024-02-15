@@ -4560,3 +4560,12 @@ const storage = {
 
 
 const clamp = (val, min, max) => Math.min(Math.max(val, min), max);
+
+
+const debounce = (fn, delay) => {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), delay);
+  };
+};
