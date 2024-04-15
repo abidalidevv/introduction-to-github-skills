@@ -4597,3 +4597,7 @@ const range = (start, end, step = 1) => {
 
 
 const flatten = (arr, depth = 1) => arr.flat(depth);
+
+
+const omit = (obj, keys) =>
+  Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));
