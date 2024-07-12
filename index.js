@@ -4627,3 +4627,7 @@ const formatCurrency = (amount, currency = 'USD', locale = 'en-US') =>
 
 const scrollToTop = (smooth = true) =>
   window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+
+
+const toCamelCase = (str) =>
+  str.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
