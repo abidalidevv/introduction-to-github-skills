@@ -4665,3 +4665,7 @@ const formatDate = (date, locale = 'en-US', options = {}) =>
     year: 'numeric', month: 'short', day: 'numeric',
     ...options,
   }).format(new Date(date));
+
+
+const scrollToTop = (smooth = true) =>
+  window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
