@@ -4705,3 +4705,7 @@ const copyToClipboard = async (text) => {
     document.body.removeChild(el);
   }
 };
+
+
+const parseQueryString = (search = window.location.search) =>
+  Object.fromEntries(new URLSearchParams(search));
