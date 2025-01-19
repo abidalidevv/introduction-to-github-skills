@@ -4721,3 +4721,7 @@ const retry = async (fn, attempts = 3, delay = 500) => {
     }
   }
 };
+
+
+const omit = (obj, keys) =>
+  Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));
