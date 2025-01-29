@@ -4734,3 +4734,7 @@ const setNestedValue = (obj, path, value) => {
   target[last] = value;
   return obj;
 };
+
+
+const generateId = (length = 8) =>
+  Math.random().toString(36).substring(2, 2 + length);
