@@ -4761,3 +4761,7 @@ const storage = {
   set: (key, value) => localStorage.setItem(key, JSON.stringify(value)),
   remove: (key) => localStorage.removeItem(key),
 };
+
+
+const getNestedValue = (obj, path, fallback = undefined) =>
+  path.split('.').reduce((acc, key) => acc?.[key], obj) ?? fallback;
