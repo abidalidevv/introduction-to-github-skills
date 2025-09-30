@@ -4815,3 +4815,6 @@ const formatDate = (date, locale = 'en-US', options = {}) =>
     year: 'numeric', month: 'short', day: 'numeric',
     ...options,
   }).format(new Date(date));
+
+
+const pipe = (...fns) => (value) => fns.reduce((v, fn) => fn(v), value);
