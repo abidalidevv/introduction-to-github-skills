@@ -4847,3 +4847,7 @@ const chunk = (arr, size) =>
 
 const omit = (obj, keys) =>
   Object.fromEntries(Object.entries(obj).filter(([k]) => !keys.includes(k)));
+
+
+const parseQueryString = (search = window.location.search) =>
+  Object.fromEntries(new URLSearchParams(search));
